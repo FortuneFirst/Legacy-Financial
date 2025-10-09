@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Fortune First AI Insurance Copilot</title>
+<style>
+body{font-family:Arial,Helvetica,sans-serif;margin:0;}
+#ai-copilot-widget{position:fixed;bottom:20px;right:20px;width:360px;height:540px;border:1px solid #e6e6e6;border-radius:10px;box-shadow:0 8px 30px rgba(0,0,0,0.12);background:#fff;z-index:99999;display:flex;flex-direction:column;overflow:hidden;}
+.header{background:#1a3c6e;color:#fff;padding:12px;text-align:center;font-weight:700;}
+.body{padding:16px;flex:1;overflow:auto;}
+.footer{padding:8px;font-size:12px;background:#fafafa;border-top:1px solid #eee;text-align:center;}
+button.start{padding:10px 14px;border-radius:6px;border:none;background:#1a3c6e;color:#fff;cursor:pointer;}
+</style>
+</head>
+<body>
+<div id="ai-copilot-widget">
+  <div class="header"><img src="FortuneFirst_Logo.png" alt="Fortune First" style="height:32px;vertical-align:middle;margin-right:8px;"> Fortune First Copilot</div>
+  <div class="body">
+    <p>Before using the Copilot, please review and accept our <a href="privacy-policy.html" target="_blank">Privacy Policy</a> and <a href="terms-of-use.html" target="_blank">Terms of Use</a>.</p>
+    <label><input type="checkbox" id="consent-checkbox"> I agree to the Privacy Policy & Terms of Use</label>
+    <div style="margin-top:12px;">
+      <button id="open-copilot" class="start" disabled>Start Copilot</button>
+    </div>
+    <div id="copilot-container" style="display:none;margin-top:12px;">
+      <form id="copilot-form"><textarea name="userInput" rows="5" style="width:100%;"></textarea><br><button type="submit" class="start">Ask</button></form>
+      <div id="copilot-response" style="margin-top:12px;color:#222;"></div>
+    </div>
+  </div>
+  <div class="footer">Fortune First — Educational Tool • Privacy-first</div>
+</div>
+<script src="copilot.min.js"></script>
+</body></html>
